@@ -1,7 +1,7 @@
-package com.eric.ecommerce_product_service.repositories;
+package com.eric.ecommerce_product_service.product.repo;
 
-import com.eric.ecommerce_product_service.entities.Category;
-import com.eric.ecommerce_product_service.entities.Product;
+import com.eric.ecommerce_product_service.category.entity.Category;
+import com.eric.ecommerce_product_service.product.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

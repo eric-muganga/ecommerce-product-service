@@ -1,6 +1,6 @@
-package com.eric.ecommerce_product_service.repositories;
+package com.eric.ecommerce_product_service.review.repo;
 
-import com.eric.ecommerce_product_service.entities.Review;
+import com.eric.ecommerce_product_service.review.entity.Review;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

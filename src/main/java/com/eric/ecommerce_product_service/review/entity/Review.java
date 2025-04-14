@@ -1,5 +1,6 @@
-package com.eric.ecommerce_product_service.entities;
+package com.eric.ecommerce_product_service.review.entity;
 
+import com.eric.ecommerce_product_service.product.entity.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
