@@ -2,6 +2,8 @@ package com.eric.ecommerce_product_service.review.entity;
 
 import com.eric.ecommerce_product_service.product.entity.Product;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,6 +31,8 @@ public class Review {
 
     private String comment;
 
+    @Min(1)
+    @Max(5)
     @Column(nullable = false)
     private int rating; // 1–5
 
