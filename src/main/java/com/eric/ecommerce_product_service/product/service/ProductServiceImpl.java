@@ -1,18 +1,17 @@
 package com.eric.ecommerce_product_service.product.service;
 
+import com.eric.ecommerce_product_service.exceptions.ResourceNotFoundException;
 import com.eric.ecommerce_product_service.product.entity.Product;
 import com.eric.ecommerce_product_service.product.repo.ProductRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 public class ProductServiceImpl implements IProductService {
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
 
     @Override
@@ -23,7 +22,7 @@ public class ProductServiceImpl implements IProductService {
     @Override
     public Product getProductById(Long id) {
         return productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found with ID: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Product with id " + id + " not found"));
     }
 
     @Override
